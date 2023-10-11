@@ -24,8 +24,6 @@ namespace Lab8_OOP_Generic_Collections
             Salary = salary;
         }
 
-        //Varför?
-
         //Adding a override to be able to print out the data.
         public override string ToString()
         {

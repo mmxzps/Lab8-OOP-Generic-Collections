@@ -35,7 +35,6 @@ namespace Lab8_OOP_Generic_Collections
             Console.WriteLine("----------------------------------------------");
             Console.WriteLine("Retrive using pop method");
 
-            //varför inte foreach?
 
             //using a while loop to print out the elements.
             while (stack.Count > 0)
@@ -47,6 +46,7 @@ namespace Lab8_OOP_Generic_Collections
                 //printing out the amount of items thar are left after every itretation 
                 Console.WriteLine($"Items left in the stack: {stack.Count()}");
             }
+
             //adding the employe objects back in the stack.
             stack.Push(employee1);
             stack.Push(employee2);
@@ -116,6 +116,7 @@ namespace Lab8_OOP_Generic_Collections
             Employee found = ListEmployee.Find(find => find.Gender == "Male");
             Console.WriteLine(found);
 
+            //divider
             Console.WriteLine("----------------------------------------------");
 
             //using findAll method to find all "Male" on the list. putting it in a list because it contains several elements.
