@@ -25,9 +25,11 @@ namespace Lab8_OOP_Generic_Collections
         }
 
         //Adding a override to be able to print out the data.
-        public override string ToString()
+        public void EmployeeInfo()
         {
-            return ($"Id: {Id} Name: {Name} Gender: {Gender} Salary: {Salary}");
+            Console.ForegroundColor = ConsoleColor.DarkYellow;
+            Console.WriteLine($"Id:{Id} Name:{Name} Gender:{Gender} Salary:{Salary}");
+            Console.ResetColor();
         }
 
     }

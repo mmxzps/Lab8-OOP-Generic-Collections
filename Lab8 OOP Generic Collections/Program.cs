@@ -24,9 +24,9 @@ namespace Lab8_OOP_Generic_Collections
             stack.Push(employee5);
 
             //using foreach to print out all the elements in stack
-            foreach (Employee i in stack)
+            foreach (Employee emp in stack)
             {
-                Console.WriteLine(i);
+                emp.EmployeeInfo();
                 //printing out the amount of items thar are left after every itretation 
                 Console.WriteLine($"Items left in the stack: {stack.Count()}");
             }
@@ -42,7 +42,7 @@ namespace Lab8_OOP_Generic_Collections
                 //storing the elements in a variable after taking them out from the stack.
                 var popEmployes = stack.Pop();
                 //printing out the elements that are in the variable
-                Console.WriteLine(popEmployes);
+                popEmployes.EmployeeInfo();
                 //printing out the amount of items thar are left after every itretation 
                 Console.WriteLine($"Items left in the stack: {stack.Count()}");
             }
@@ -58,19 +58,13 @@ namespace Lab8_OOP_Generic_Collections
             Console.WriteLine("----------------------------------------------");
             Console.WriteLine("Retrive using peek method");
 
-            //printing out the elements with peek. using a for loop that iterates 2 times for printing out t objects.
+            //printing out the elements with peek. using a for-loop that iterates 2 times for printing out 2 objects.
             for (int i = 0; i < 2; i++)
             {
                 var peek = stack.Peek();
-                Console.WriteLine(peek);
+                peek.EmployeeInfo();
                 Console.WriteLine($"Items left in the stack: {stack.Count()}");
             }
-
-            //var peek = stack.Peek();
-            //Console.WriteLine(peek);
-            //Console.WriteLine($"Items left in the stack: {stack.Count()}");
-            //Console.WriteLine(peek);
-            //Console.WriteLine($"Items left in the stack: {stack.Count()}");
 
             //divider
             Console.WriteLine("----------------------------------------------");
@@ -78,11 +72,11 @@ namespace Lab8_OOP_Generic_Collections
             //Checking if stack contains a employee3 the returning answer
             if (stack.Contains(employee3))
             {
-                Console.WriteLine($"employee3 is in the stock.");
+                Console.WriteLine("employee3 is in the stock.");
             }
             else
             {
-                Console.WriteLine($"employee3 is in not the stock.");
+                Console.WriteLine("employee3 is in not the stock.");
             }
 
             //divider
@@ -99,33 +93,33 @@ namespace Lab8_OOP_Generic_Collections
             ListEmployee.Add(employee4);
             ListEmployee.Add(employee5);
 
-            //checking if the list contins employee2 and printing the answer with the contain method.
+            //checking if the list contains employee2 and printing the answer with the contain method.
             if (ListEmployee.Contains(employee2))
             {
-                Console.WriteLine($"employee2 object exists in the list");
+                Console.WriteLine("employee2 object exists in the list");
             }
             else
             {
-                Console.WriteLine($"employee2 object does not exists in the list");
+                Console.WriteLine("employee2 object does not exists in the list");
             }
 
             //divider
             Console.WriteLine("----------------------------------------------");
 
             //using find method to find the first "Male" on the list. putting it in a variable then printing it out.
-            Employee found = ListEmployee.Find(find => find.Gender == "Male");
-            Console.WriteLine(found);
+            Employee male = ListEmployee.Find(find => find.Gender == "Male");
+            male.EmployeeInfo();
 
             //divider
             Console.WriteLine("----------------------------------------------");
 
             //using findAll method to find all "Male" on the list. putting it in a list because it contains several elements.
-            List<Employee> alla = ListEmployee.FindAll(find => find.Gender == "Male");
+            List<Employee> empList = ListEmployee.FindAll(find => find.Gender == "Male");
 
             //printing it out all the found elements with a foreachloop
-            foreach (Employee employee in alla)
+            foreach (Employee males in empList)
             {
-                Console.WriteLine(employee);
+                males.EmployeeInfo();
             }
         }         
     }
